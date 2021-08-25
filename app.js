@@ -5,7 +5,7 @@ const bodyParser=require("body-parser");
 
 
 const bcrypt = require('bcrypt');
-
+const port=process.env.PORT || 3000;
 
 const saltRound = 10;
 
@@ -167,7 +167,7 @@ app.post("/login",function(req,res){
 
 });
 
-app.listen(30000,function(){
+app.listen(port,function(){
     console.log("on 3000");
 });
 
